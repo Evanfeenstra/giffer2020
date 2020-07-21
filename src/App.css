@@ -17,7 +17,16 @@ html,body{
   display: flex;
   align-items: center;
   height:80px;
+  margin-top: 10px;
 }
 .memes{
-  height:calc(100% - 80px);
+  max-height:calc(100% - 90px);
+  max-width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.memes img {
+  margin:16px;
 }

@@ -34,7 +34,6 @@ function App() {
       </div>
       <div className="memes">
         {memes.map((m,i)=>{
-          console.log(m)
           return <img key={i} 
             src={m.images.fixed_height.url}
           />
