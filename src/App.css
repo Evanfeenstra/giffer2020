@@ -8,6 +8,7 @@ html,body{
   flex:1;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   background-color: whitesmoke;
   position: absolute;
   top:0; left:0; right:0; bottom:0;
@@ -15,4 +16,8 @@ html,body{
 .searchbar{
   display: flex;
   align-items: center;
+  height:80px;
+}
+.memes{
+  height:calc(100% - 80px);
 }

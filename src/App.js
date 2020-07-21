@@ -5,9 +5,15 @@ import Button from '@material-ui/core/Button';
 
 function App() {
   const [text,setText] = useState('')
+  const [memes,setMemes] = useState([])
 
-  function search(){
-
+  async function search(){
+    const key = 'bdHT5nMfUGwCdkfXJ8sJGOPui9uDqIwI'
+    const url = `https://api.giphy.com/v1/gifs/search?api_key=${key}&q=${text}&limit=25&offset=0&lang=en`
+    const r = await fetch(url)
+    const j = await r.json()
+    setMemes(j.data)
+    setText('')
   }
 
   return (
@@ -25,6 +31,14 @@ function App() {
           disabled={!text} onClick={search}>
           Search
         </Button>
+      </div>
+      <div className="memes">
+        {memes.map((m,i)=>{
+          console.log(m)
+          return <img key={i} 
+            src={m.images.fixed_height.url}
+          />
+        })}
       </div>
     </div>
   )
