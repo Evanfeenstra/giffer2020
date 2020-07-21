@@ -1,0 +1,18 @@
+html,body{
+  height:100%;
+  display:flex;
+  flex:1;
+}
+.App {
+  display:flex;
+  flex:1;
+  align-items: center;
+  justify-content: center;
+  background-color: whitesmoke;
+  position: absolute;
+  top:0; left:0; right:0; bottom:0;
+}
+.searchbar{
+  display: flex;
+  align-items: center;
+}
