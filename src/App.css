@@ -1,3 +1,19 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 15px;
+}
+@media (min-width: 400px) {
+  html { /* TABLET */
+    font-size: 18px;
+  }
+}
+@media (min-width: 768px) {
+  html { /* DESKTOP */
+    font-size: 21px;
+  }
+}
 html,body{
   height:100%;
   display:flex;
@@ -27,6 +43,20 @@ html,body{
   justify-content: center;
   flex-wrap: wrap;
 }
-.memes img {
+.meme img {
+  width:100%;
+}
+.meme{
+  max-width: 100vw;
   margin:16px;
+  position: relative;
+}
+.meme-title{
+  background-color: rgba(0,0,0,0.5);
+  color:white;
+  padding: .2rem .3rem;
+  position: absolute;
+  bottom:0px;
+  width:100%;
+  left:0px;
 }
